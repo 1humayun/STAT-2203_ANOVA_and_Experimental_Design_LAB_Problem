@@ -1,7 +1,7 @@
 # STAT_2104_Programming_with_R_and_Python_LAB
 
 Welcome to the STAT-2203_ANOVA_and_Experimental_Design_LAB_Problem repository! This repository contains solutions to the programming problems assigned during the lab sessions for the course. I've provided solutions based on the instructions given in the document provided by our course teacher.
-https://github.com/1humayun/STAT-2203_ANOVA_and_Experimental_Design_LAB_Problem
+
 ## Accessing Files in the Main Branch
 
 To access the files in the main branch of this repository, follow these steps:
