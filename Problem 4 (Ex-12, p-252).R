@@ -27,19 +27,6 @@ anova_model = summary(fit)
 anova_model
 
 
-#Extra part... print out the significant and insignificant factor effects
-p_values = anova_model[[1]][,5]    # anova model is a list, stored in index [[1]] & Pr is in all row and col 5 as index [,5]
-p_values
-factor_name = rownames(anova_model[[1]])
-for (i in 1:length(p_values)){
-   if (!is.na(p_values[i]) && p_values[i] < 0.05){
-      cat("The effect of ", factor_name[i], " is Significant at 5% Level of Significance.", "\n")
-   } else{
-      cat("The effect of ", factor_name[i], " is Insignificant at 5% Level of Significance.\n")
-   }
-}
-
-
 #.............................. (i) ...
 # To estimate the main effects and interactions:
 model_coefficients <- coef(fit)
@@ -52,19 +39,3 @@ model <- aov(Yield ~ Block + A * B * C - A:B:C, data = df)
 # Display ANOVA table
 anova_table <- summary(model)
 print(anova_table)
-
-
-#Extra part... print out the significant and insignificant factor effects...
-p_values = anova_table[[1]][,5]    # anova_table is a list, stored in index [[1]] & Pr is in all row and col 5 as index [,5]
-p_values
-factor_name = rownames(anova_table[[1]])
-for (i in 1:length(p_values)){
-   if (!is.na(p_values[i]) && p_values[i] < 0.05){
-      cat("The effect of ", factor_name[i], " is Significant at 5% Level of Significance.", "\n")
-   } else{
-      cat("The effect of ", factor_name[i], " is Insignificant at 5% Level of Significance.\n")
-   }
-}
-
-
-
