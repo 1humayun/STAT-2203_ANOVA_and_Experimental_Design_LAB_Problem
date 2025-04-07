@@ -61,13 +61,6 @@ mis.index = which(is.na(df$Response))
 mis.block = df$Block[mis.index]
 mis.treatment = df$Treatment[mis.index]
 
-b.mean = mean(df$Response[df$Block==mis.block], na.rm = TRUE)
-t.mean = mean(df$Response[df$Treatment == mis.treatment], na.rm=TRUE)
-g.mean = mean(df$Response, na.rm = TRUE)
-missing.v = t.mean + b.mean - g.mean
-missing.v
-
-#Another way...
 n.b = 4
 n.t = 6
 b.sum = sum(df$Response[df$Block==mis.block], na.rm = TRUE)
